@@ -46,26 +46,31 @@ html, body{ position: relative; min-width: var(--basic-width); background: var(-
 /*---------------------------지울 곳//*/
 
 h1, h2, h3, h4, h5, h6{ position: relative; line-height: 1em;}
-h1, h2, h3, h4, h5, h6{ font-family: "Poppins"; line-height: 1.25em;}
+h1, h2, h3, h4, h5, h6, span, strong{ font-family: "Poppins"; line-height: 1.25em;}
 h1{ font-size:  8.5em; }
 h2{ font-size:    6em; font-weight: 600; line-height: 0.9em; }
-h3{ font-size:    2em; }
-h4{ font-size: 1.45em; font-weight: 400;}
-h5{ font-size:    1em; font-weight: 500;}
+h3{ font-size:    2em; font-weight: 500; }
+h4{ font-size: 1.45em; font-weight: 500;}
+h5{ font-size:    1em; font-weight: 500; color: var(--color-w-085); }
 h6{ font-size:  .85em; font-weight: 500;}
 
-.center{ text-align: center;}
+.center{ text-align: center; }
+.right { text-align: right; }
 .title_con{ position: relative;}
 .title_con + *{ margin-top: var(--mrgn-x4) !important;}
 .title_con h1{ margin-bottom: var(--mrgn-x2);}
 .title_con h2{ margin-bottom: var(--mrgn-x2);}
-.title_con h3{ margin-bottom: var(--mrgn); color: var(--color-point);}
+.title_con h3{ color: var(--color-point);}
 .title_con h3::before { content: ''; position: absolute; left: 0; top: -28px; width: 43px; height: 24px; background: url(../img/ci_mclaren_semi.png); }
 .title_con h4{ margin-bottom: var(--mrgn);}
 .title_con h4:before{ position: absolute; top: calc(var(--mrgn) * -1); left: 0; content: ''; width: var(--mrgn-x2); height: 3px; background: var(--color-point);}
 .title_con.center h4:before{left: 50%; margin-left: calc(var(--mrgn) * -1);}
 .title_con h5{}
 .title_con h6{}
+.title_con.black h1,
+.title_con.black h2,
+.title_con.black h4 { color: var(--color-k); }
+.title_con.black h5 { color: var(--color-k-085); } 
 
 ul.v_con{ width: calc(100% + var(--mrgn-x2)); margin: 0 calc(var(--mrgn) * -1) calc(var(--mrgn-x2) * -1);}
 ul.v_con > li.cells{ position: relative; display: inline-block; margin: 0 var(--mrgn) var(--mrgn-x2); width: calc(100% - var(--mrgn-x2)); }
