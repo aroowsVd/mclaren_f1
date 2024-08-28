@@ -20,14 +20,19 @@ function diffDay() {
     const min = Math.floor((dayCount / (1000 * 60)) % 60);
     const sec = Math.floor((dayCount / 1000) % 60);
 
-    document.querySelector('.days .value').innerText = day;
-    document.querySelector('.hours .value').innerHTML = hour;
-    document.querySelector('.mins .value').innerHTML = min;
-    document.querySelector('.secs .value').innerHTML = sec;
-    // $(".day .value").text(day);
-    // $(".hour .value").text(hour);
-    // $(".minute .value").text(min);
-    // $(".second .value").text(sec);
+    const dDay = document.querySelectorAll('.days .value');
+    const dHour = document.querySelectorAll('.hours .value');
+    const dMin = document.querySelectorAll('.mins .value');
+    const dSec = document.querySelectorAll('.secs .value');
+    
+    dDay.forEach(dVal => dVal.innerText = day);
+    dHour.forEach(hVal => hVal.innerText = hour);
+    dMin.forEach(mVal => mVal.innerText = min);
+    dSec.forEach(sVal => sVal.innerText = sec);
+    // document.querySelector('.days .value').innerText = day;
+    // document.querySelector('.hours .value').innerHTML = hour;
+    // document.querySelector('.mins .value').innerHTML = min;
+    // document.querySelector('.secs .value').innerHTML = sec;
 }
 diffDay();
 setInterval(diffDay, 1000);
