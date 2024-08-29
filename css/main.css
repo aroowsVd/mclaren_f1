@@ -11,7 +11,6 @@
 #visual.sections.section_01 > .width_con .title_con h5{}
 #visual.sections.section_01 > .width_con .section01_box { position: absolute; left: 0; bottom: -145px; width: 100%; }
 #visual.sections.section_01 > .width_con .section01_box > .box { position: relative; padding: var(--mrgn-x2) !important; box-sizing: border-box; }
-#visual.sections.section_01 > .width_con .section01_box > .box::before { content: ''; position: absolute; left: 9px; top: 9px; width: calc(100% - var(--mrgn)); height: calc(100% - var(--mrgn)); border: 2px solid #fff; border-radius: 7px; box-sizing: border-box; }
 #visual.sections.section_01 > .width_con .section01_box > .box > h3 { padding-bottom: var(--mrgn-x2); }
 #visual.sections.section_01 > .width_con .section01_box > .box > h3::after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 2px; background: var(--color-sub); }
 #visual.sections.section_01 > .width_con .section01_box > .box.box_left { float: left; width: calc(67px * 4 + var(--mrgn-x2) * 3); }
@@ -44,12 +43,26 @@
 #ad_01.sections.section_02 > .width_con > ul > li.cells > div > h3 { line-height: 60px; }
 #ad_01.sections.section_02 > .width_con > ul > li.cells > div > span { position: absolute; left: 50%; bottom: 2px; color: var(--color-w-085); transform: translateX(-50%); }
 
-/*  driver section03  */
-#driver.sections.section_03 { background: url(../img/bg_lando-cover-2024.jpg) no-repeat center/100%;}
+/* driver section03  */
+#driver.sections.section_03 { position: relative; background: url(../img/bg_lando-cover-2024.jpg) no-repeat left bottom; overflow: hidden;}
+#driver.sections.section_03 > .slide_toggle { position: absolute; right: 0; top: 0; width: 53px; height: 100%; background: var(--color-point); text-wrap: nowrap; cursor: pointer; transition: all .3s ease-in-out; box-shadow: 0 0 20px 0 var(--color-k-085); border-radius: 10px 0 0 10px; }
+#driver.sections.section_03 > .slide_toggle .arrow {}
+#driver.sections.section_03 > .slide_toggle .arrow > i { font-size: 2em; line-height: 722.78px; margin-left: 18px; opacity: 0; transition: all .5s ease-in-out; }
+#driver.sections.section_03 > .slide_toggle:hover { width: 90px; }
+#driver.sections.section_03 > .slide_toggle:hover .arrow > i {opacity: 1;}
+#driver.sections.section_03 > .slide_toggle > h3 { position: absolute; right: -117px; top: 345px; transform: rotate(90deg); }
 #driver.sections.section_03 > .width_con {}
 #driver.sections.section_03 > .width_con ul.v_con {}
-#driver.sections.section_03 > .width_con ul.v_con > li.cells {}
+#driver.sections.section_03 > .width_con ul.v_con > li.cells { vertical-align: middle; }
 #driver.sections.section_03 > .width_con ul.v_con > li.cells .title_con {}
+#driver.sections.section_03 > .width_con ul.v_con > li.cells .box { position: relative; margin-left: var(--mrgn-x4); }
+#driver.sections.section_03 > .width_con ul.v_con > li.cells .box::after { content: ''; position: absolute; right: 39px; bottom: 62px; width: 130px; height: 100px; background: url(../img/noris_logo.png) no-repeat; background-size: cover; }
+#driver.sections.section_03 > .width_con ul.v_con > li.cells .box .box_title { position: relative; display: inline-block; margin-bottom: var(--mrgn-x2); }
+#driver.sections.section_03 > .width_con ul.v_con > li.cells .box .box_title::before { content: ''; position: absolute; left: calc(var(--mrgn-x2) * -1); top: calc(var(--mrgn-half) * -1); width: calc(100% + var(--mrgn-x4 )); height: calc(100% + var(--mrgn)); background: var(--color-point); transform: skewX(-30deg); }
+#driver.sections.section_03 > .width_con ul.v_con > li.cells .box .box_title > h3 {}
+#driver.sections.section_03 > .width_con ul.v_con > li.cells .box ul.v_con > li.cells {  }
+#driver.sections.section_03 > .width_con ul.v_con > li.cells .box ul.v_con > li.cells:first-child > h4 { color: var(--color-w-065); }
+
 
 
 

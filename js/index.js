@@ -1,3 +1,4 @@
+// nav down
 window.addEventListener('scroll', function() {
     let header = document.getElementById('header');
 

@@ -142,8 +142,8 @@ ul.v_con > li.cells .text_con h6{}
 
 
 /* 박스모델 */
-.box { background: var(--color-k-075); border-radius: 10px; padding: var(--mrgn-x4) var(--mrgn-x2); }
-
+.box { position: relative; background: var(--color-k-075); border-radius: 10px; padding: var(--mrgn-x4) var(--mrgn-x2); }
+.box::before { content: ''; position: absolute; left: 9px; top: 9px; width: calc(100% - var(--mrgn)); height: calc(100% - var(--mrgn)); border: 2px solid var(--color-w-075); border-radius: 7px; box-sizing: border-box; }
 
 
 
