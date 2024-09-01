@@ -9,7 +9,11 @@
 #visual.sections.section_01 > .width_con .title_con h2{}
 #visual.sections.section_01 > .width_con .title_con h4{}
 #visual.sections.section_01 > .width_con .title_con h5{}
-#visual.sections.section_01 > .width_con .section01_box { position: absolute; left: 0; bottom: -145px; width: 100%; }
+#visual.sections.section_01 > .width_con .title_con > h3,
+#visual.sections.section_01 > .width_con .title_con > h2,
+#visual.sections.section_01 > .width_con .title_con > h4,
+#visual.sections.section_01 > .width_con .title_con > h5 { animation-name: text; animation-delay: 1.8s; animation-duration: 1.3s; animation-fill-mode: both; animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1); }
+#visual.sections.section_01 > .width_con .section01_box { position: absolute; left: 0; bottom: -145px; width: 100%; opacity: 0; animation: blurredBanner 1s 2.8s ease-in-out forwards; }
 #visual.sections.section_01 > .width_con .section01_box > .box { position: relative; padding: var(--mrgn-x2) !important; box-sizing: border-box; }
 #visual.sections.section_01 > .width_con .section01_box > .box > h3 { padding-bottom: var(--mrgn-x2); }
 #visual.sections.section_01 > .width_con .section01_box > .box > h3::after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 2px; background: var(--color-sub); }
@@ -32,6 +36,32 @@
 #visual.sections.section_01 > .width_con .section01_box > .box.box_right .box_half > div > .value { font-weight: 700; }
 #visual.sections.section_01 > .width_con .section01_box > .box.box_right .box_half > div > span { display: block; }
 
+/* visual animation */
+@keyframes text {
+	from {
+		clip-path: inset(0 100% 0 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+@keyframes blurredBanner {
+	0% {
+		filter: blur(10px);
+	}
+	60% {
+		opacity: 1;
+		filter: blur(10px);
+	}
+	100% {
+		backdrop-filter: blur(10px);
+		filter: blur(0px);
+		opacity: 1;
+	}
+}
+
+
 /* ad_01 section02 */
 #ad_01.sections.section_02 { background: url(../img/bg_pattern_carbon.jpg) repeat; }
 #ad_01.sections.section_02 > .width_con { padding: var(--mrgn) 0; }
@@ -46,10 +76,10 @@
 /* driver section03  */
 #driver.sections.section_03 { position: relative; background: url(../img/bg_lando-cover-2024.jpg) no-repeat left bottom; overflow: hidden;}
 #driver.sections.section_03 > .slide_toggle { position: absolute; right: 0; top: 0; width: 53px; height: 100%; background: var(--color-point); text-wrap: nowrap; cursor: pointer; transition: all .3s ease-in-out; box-shadow: 0 0 20px 0 var(--color-k-085); border-radius: 10px 0 0 10px; }
-#driver.sections.section_03 > .slide_toggle .arrow {}
-#driver.sections.section_03 > .slide_toggle .arrow > i { font-size: 2em; line-height: 722.78px; margin-left: 18px; opacity: 0; transition: all .5s ease-in-out; }
-#driver.sections.section_03 > .slide_toggle:hover { width: 90px; }
-#driver.sections.section_03 > .slide_toggle:hover .arrow > i {opacity: 1;}
+#driver.sections.section_03 > .slide_toggle .arrow {position: absolute; top: 50%; left: -30px; width: 30px; height: 60px; transform: translateY(-50%); background: var(--color-point); text-align: center; border-radius: 10px 0 0 10px; box-shadow: -5px 0 20px -5px var(--color-k-085); }
+#driver.sections.section_03 > .slide_toggle .arrow::before { position: absolute; content: ''; width: 10px; height: 10px; right: 0; top: -10px; background-image: radial-gradient(circle at 0% 0%, transparent 9.9px, var(--color-point) 10px);}
+#driver.sections.section_03 > .slide_toggle .arrow::after { position: absolute; content: ''; width: 10px; height: 10px; right: 0; bottom: -10px; background-image: radial-gradient(circle at 0% 100%, transparent 9.9px, var(--color-point) 10px); }
+#driver.sections.section_03 > .slide_toggle .arrow > i { font-size: 25px; line-height: 60px; }
 #driver.sections.section_03 > .slide_toggle > h3 { position: absolute; right: -117px; top: 345px; transform: rotate(90deg); }
 #driver.sections.section_03 > .width_con {}
 #driver.sections.section_03 > .width_con ul.v_con {}
@@ -63,10 +93,23 @@
 #driver.sections.section_03 > .width_con ul.v_con > li.cells .box ul.v_con > li.cells {  }
 #driver.sections.section_03 > .width_con ul.v_con > li.cells .box ul.v_con > li.cells:first-child > h4 { color: var(--color-w-065); }
 
+/* MCL38 section04 */
+#machine.sections.section_04 { background: #000; }
+#machine.sections.section_04 > .width_con { padding-bottom: var(--mrgn-x4); }
+#machine.sections.section_04 > .machine_wrap { position: relative; background: url(../img/bg_machine.jpg) no-repeat; background-size: cover; height: 1080px; }
+#machine.sections.section_04 > .machine_wrap::before { position: absolute; content: ''; left: 0; top: 0; width: 100%; height: 30%; background: linear-gradient(var(--color-k-085), var(--color-k-000)) 90%; }
+#machine.sections.section_04 > .machine_wrap > .width_con > .machine_btns {}
+#machine.sections.section_04 > .machine_wrap > .width_con > .machine_btns > button { color: var(--color-point); background: #000; border: 2px solid var(--color-point); position: absolute; transition: all .25s linear; }
+#machine.sections.section_04 > .machine_wrap > .width_con > .machine_btns > button:hover { color: var(--color-sub); border-color: #ff9843; }
+#machine.sections.section_04 > .machine_wrap > .width_con > .machine_btns > button.btn_01 { left: 22%; top: 162%; }
+#machine.sections.section_04 > .machine_wrap > .width_con > .machine_btns > button.btn_02 { left: 44%; top: 143%; }
+#machine.sections.section_04 > .machine_wrap > .width_con > .machine_btns > button.btn_03 { left: 29%; top: 194%; }
+#machine.sections.section_04 > .machine_wrap > .width_con > .machine_btns > button.btn_04 { left: 48%; top: 187%; }
+#machine.sections.section_04 > .machine_wrap > .width_con > .machine_btns > button.btn_05 { left: 60%; top: 203%; }
+#machine.sections.section_04 > .machine_wrap > .width_con > .machine_btns > button.btn_06 { left: 71%; top: 227%; }
 
 
 
-#.sections.section_04{}
 #.sections.section_05{}
 #.sections.section_06{}
 #.sections.section_07{}
