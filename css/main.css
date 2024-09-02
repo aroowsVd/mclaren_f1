@@ -73,10 +73,11 @@
 #ad_01.sections.section_02 > .width_con > ul > li.cells > div > h3 { line-height: 60px; }
 #ad_01.sections.section_02 > .width_con > ul > li.cells > div > span { position: absolute; left: 50%; bottom: 2px; color: var(--color-w-085); transform: translateX(-50%); }
 
+
 /* driver section03  */
 #driver.sections.section_03 { position: relative; background: url(../img/bg_lando-cover-2024.jpg) no-repeat left bottom; overflow: hidden;}
 #driver.sections.section_03 > .slide_toggle { position: absolute; right: 0; top: 0; width: 53px; height: 100%; background: var(--color-point); text-wrap: nowrap; cursor: pointer; transition: all .3s ease-in-out; box-shadow: 0 0 20px 0 var(--color-k-085); border-radius: 10px 0 0 10px; }
-#driver.sections.section_03 > .slide_toggle .arrow {position: absolute; top: 50%; left: -30px; width: 30px; height: 60px; transform: translateY(-50%); background: var(--color-point); text-align: center; border-radius: 10px 0 0 10px; box-shadow: -5px 0 20px -5px var(--color-k-085); }
+#driver.sections.section_03 > .slide_toggle .arrow {position: absolute; top: 50%; left: -30px; width: 30px; height: 60px; transform: translateY(-50%); background: var(--color-point); text-align: center; border-radius: 10px 0 0 10px; box-shadow: -10px 0 20px -10px var(--color-k-085); }
 #driver.sections.section_03 > .slide_toggle .arrow::before { position: absolute; content: ''; width: 10px; height: 10px; right: 0; top: -10px; background-image: radial-gradient(circle at 0% 0%, transparent 9.9px, var(--color-point) 10px);}
 #driver.sections.section_03 > .slide_toggle .arrow::after { position: absolute; content: ''; width: 10px; height: 10px; right: 0; bottom: -10px; background-image: radial-gradient(circle at 0% 100%, transparent 9.9px, var(--color-point) 10px); }
 #driver.sections.section_03 > .slide_toggle .arrow > i { font-size: 25px; line-height: 60px; }
@@ -85,13 +86,12 @@
 #driver.sections.section_03 > .width_con ul.v_con {}
 #driver.sections.section_03 > .width_con ul.v_con > li.cells { vertical-align: middle; }
 #driver.sections.section_03 > .width_con ul.v_con > li.cells .title_con {}
-#driver.sections.section_03 > .width_con ul.v_con > li.cells .box { position: relative; margin-left: var(--mrgn-x4); }
+#driver.sections.section_03 > .width_con ul.v_con > li.cells .box { position: relative; float: right; width: 66%; }
 #driver.sections.section_03 > .width_con ul.v_con > li.cells .box::after { content: ''; position: absolute; right: 39px; bottom: 62px; width: 130px; height: 100px; background: url(../img/noris_logo.png) no-repeat; background-size: cover; }
-#driver.sections.section_03 > .width_con ul.v_con > li.cells .box .box_title { position: relative; display: inline-block; margin-bottom: var(--mrgn-x2); }
-#driver.sections.section_03 > .width_con ul.v_con > li.cells .box .box_title::before { content: ''; position: absolute; left: calc(var(--mrgn-x2) * -1); top: calc(var(--mrgn-half) * -1); width: calc(100% + var(--mrgn-x4 )); height: calc(100% + var(--mrgn)); background: var(--color-point); transform: skewX(-30deg); }
 #driver.sections.section_03 > .width_con ul.v_con > li.cells .box .box_title > h3 {}
 #driver.sections.section_03 > .width_con ul.v_con > li.cells .box ul.v_con > li.cells {  }
 #driver.sections.section_03 > .width_con ul.v_con > li.cells .box ul.v_con > li.cells:first-child > h4 { color: var(--color-w-065); }
+
 
 /* MCL38 section04 */
 #machine.sections.section_04 { background: #000; }
@@ -107,18 +107,64 @@
 #machine.sections.section_04 > .machine_wrap > .width_con > .machine_btns > button.btn_04 { left: 48%; top: 187%; }
 #machine.sections.section_04 > .machine_wrap > .width_con > .machine_btns > button.btn_05 { left: 60%; top: 203%; }
 #machine.sections.section_04 > .machine_wrap > .width_con > .machine_btns > button.btn_06 { left: 71%; top: 227%; }
+#machine.sections.section_04 > .machine_wrap > .width_con > .machine_btns > button.selected { border-radius: 50%; }
+#machine.sections.section_04 > .machine_wrap > .width_con > .machine_btns > button.selected::before { position: absolute; content: ''; background: var(--color-point); left: 50%; top: 50%; width: 10px; height: 10px; border-radius: 50%; transform: translate(-50%, -50%); }
+#machine.sections.section_04 > .machine_wrap > .width_con > .machine_btns > button.selected::after { position: absolute; content: ''; left: 50%; top: 50%; width: 70px; height: 70px; border: 6px solid var(--color-point); border-radius: 50%; animation: circle 1.5s infinite; }
+#machine.sections.section_04 > .machine_wrap > .width_con > .machine_btns > button.selected span { display: none; }
+#machine.sections.section_04 > .machine_wrap > .width_con > .machine_desc { position: absolute; left: 0; top: 0; opacity: 0; }
+#machine.sections.section_04 > .machine_wrap > .width_con > .machine_desc.selected { opacity: 0; animation: blurredBanner .5s ease-in-out forwards; }
+
+/* machine btn animation */
+@keyframes circle {
+	0%, 100% {
+		opacity: 0;
+		transform: translate3d(-50%, -50%, 0) scale(.5);
+	}
+	30% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 0;
+		transform: translate3d(-50%, -50%, 0) scale(1);
+	}
+}
 
 
+/* store section05 */
+#store.sections.section_05 { background: #181818; }
+#store.sections.section_05 > .width_con {}
+#store.sections.section_05 > .width_con > ul.v_con { padding-bottom: var(--mrgn-x2); }
+#store.sections.section_05 > .width_con > ul.v_con > li.cells { border-radius: 10px; cursor: pointer; transition: all .25s ease-in-out; overflow: hidden; }
+#store.sections.section_05 > .width_con > ul.v_con > li.cells:hover:after { position: absolute; content: ''; left: 0; bottom: 0; width: 100%; height: 4px; background: var(--color-point); transition: inherit; }
+#store.sections.section_05 > .width_con > ul.v_con > li.cells:nth-child(1) { background: url(../img/card_store01.jpg) center no-repeat; background-size: cover; }
+#store.sections.section_05 > .width_con > ul.v_con > li.cells:nth-child(1):hover { background: url(../img/card_store02.jpg) center no-repeat; background-size: cover; }
+#store.sections.section_05 > .width_con > ul.v_con > li.cells:nth-child(2) { background: url(../img/card_store03.jpg) center no-repeat; background-size: cover; }
+#store.sections.section_05 > .width_con > ul.v_con > li.cells:nth-child(2):hover { background: url(../img/card_store04.jpg) center no-repeat; background-size: cover; }
+#store.sections.section_05 > .width_con > ul.v_con > li.cells:nth-child(3) { background: url(../img/card_store05.jpg) center no-repeat; background-size: cover; }
+#store.sections.section_05 > .width_con > ul.v_con > li.cells:nth-child(3):hover { background: url(../img/card_store06.jpg) center no-repeat; background-size: cover; }
+#store.sections.section_05 > .width_con > ul.v_con > li.cells:nth-child(4) { background: url(../img/card_store07.jpg) center no-repeat; background-size: cover; }
+#store.sections.section_05 > .width_con > ul.v_con > li.cells:nth-child(4):hover { background: url(../img/card_store08.jpg) center no-repeat; background-size: cover; }
+#store.sections.section_05 > .width_con > .shop_now { display: inline-block; text-align: center; border: 2px solid var(--color-sub); background: #000; }
 
-#.sections.section_05{}
-#.sections.section_06{}
+
+/* academy section06 */
+#academy.sections.section_06 { background: url(../img/bg_abstract.jpg) no-repeat; background-size: cover; background-attachment: fixed; }
+#academy.sections.section_06 > .width_con {}
+#academy.sections.section_06 > .width_con > ul.v_con {}
+#academy.sections.section_06 > .width_con > ul.v_con > li.cells {}
+#academy.sections.section_06 > .width_con > ul.v_con > li.cells > .read_more { display: inline-block; text-align: center; border: 2px solid var(--color-sub); background: #000; margin-top: var(--mrgn-x2) !important; }
+#academy.sections.section_06 > .academy_right { position: absolute; right: 0; top: 0; width: 50%; height: 100%; background: url(../img/bg_academy.jpg) no-repeat; border-radius: 0 0 0 50px; }
+#academy.sections.section_06 > .academy_right > i { position: absolute; left: 40px; bottom: 40px; font-size: 4em; color: var(--color-point); cursor: pointer; }
+#academy.sections.section_06 > .academy_right > i::after { position: absolute; content: ''; left: 50%; top: 50%; width: 80px; height: 80px; border: 3px solid var(--color-point); border-radius: 50%; animation: circle 1.5s infinite; }
+
+
 #.sections.section_07{}
 #.sections.section_08{}
 #.sections.section_09{}
 #.sections.section_10{}
 
 
-#contact.sections.section_11{ overflow: hidden;}
+#contact.sections.section_11{ overflow: hidden; opacity: 1;}
 #contact.sections.section_11:before{ position: absolute; content: ''; top: 0; left: 0; width: 100%; height: 100%; background: var(--color-point); z-index: 1; opacity: .5; -webkit-mix-blend-mode: hue; mix-blend-mode: hue;}
 #contact.sections.section_11 .width_con{ z-index: 2;}
 #contact.sections.section_11 .width_con .title_con{}
