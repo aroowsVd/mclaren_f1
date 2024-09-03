@@ -9,8 +9,17 @@
         <!-- css -->
         <link type="text/css" rel="stylesheet" href="css/reset.css" />
         <link type="text/css" rel="stylesheet" href="css/fontawesome_all.min.css" />
+        <link type="text/css" rel="stylesheet" href="css/slick.css">
+        <link type="text/css" rel="stylesheet" href="css/slick-theme.css">
         <link type="text/css" rel="stylesheet" href="css/common.css" />
         <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+        <!-- javascript -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="js/index.js"></script>
+        <script type="text/javascript" src="js/slick.min.js"></script>
+        <script type="text/javascript" src="js/wait_scroll.js"></script>
 
         <!-- favicon -->
         <link rel="icon" type="image/png" sizes="32x32" href="https://www.mclaren.com/favicon-32x32.png" />
@@ -37,9 +46,9 @@
                         <li><a href="#machine">Machine</a></li>
                         <li><a href="#store">Store</a></li>
                         <li><a href="#academy">F1 Academy</a></li>
-                        <li><a href="#6">Media</a></li>
-                        <li><a href="#7">News</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#app">Download</a></li>
+                        <li><a href="#media">Media</a></li>
+                        <li><a href="#news">News</a></li>
                     </ul>
                 </div>
             </div>
@@ -320,49 +329,327 @@
             </div>
 
 
-            <div class="sections section_07">
-                <div class="width_con"></div>
-            </div>
-            <div class="sections section_08">
-                <div class="width_con"></div>
-            </div>
-            <div class="sections section_09">
-                <div class="width_con"></div>
-            </div>
-            <div class="sections section_10">
-                <div class="width_con"></div>
-            </div>
-            <div id="contact" class="sections section_11">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2180.409731576848!2d4.361362062242005!3d50.847051398805135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c481da7e2fb5%3A0x80469a554b969c9a!2sMIVB%20Hoofdkantoor!5e0!3m2!1sen!2sus!4v1724657650161!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- app -->
+            <div id="app" class="sections section_07">
                 <div class="width_con">
                     <ul class="v_con two_con">
                         <li class="cells">
+                            <img src="img/phone.png" alt="download">
+                        </li><!--
+                     --><li class="cells">
                             <div class="title_con">
-                                <h3>MmMm MmMm MmMm<br>MmMm MmMm MmMm</h3>
-                                <h2>MmMm MmMm MmMm<br>MmMm MmMm MmMm</h2>
-                                <h4>MmMm MmMm MmMm<br>MmMm MmMm MmMm</h4>
-                                <h5>MmMm MmMm MmMm<br>MmMm MmMm MmMm</h5>
+                                <h3>Mclaren Racing</h3>
+                                <h2>The Official<br>McLAREN App</h2>
+                                <h4>The McLaren App is designed for you, the fans, to get<br>closer to the team and to stay up-to-date with the latest<br>news and content</h4>
+                                <h5>Enjoy everything from live commentary over F1<br>race weekends to the latest articles about the team</h5>
                             </div>
-                            <ul class="v_con">
-                                <li class="cells box ratio_3x4"></li>
-                            </ul>
+                            <div class="download_btns">
+                                <div class="app_store">
+                                    <img src="img/download_app_store.svg" alt="">
+                                </div>
+                                <div class="play_store">
+                                    <img src="img/download_play_store.svg" alt="">
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="sections section_12">
-                <div class="width_con"></div>
+
+
+            <!-- media -->
+            <div id="media" class="sections section_08">
+                <div class="width_con">
+                    <div class="title_con center">
+                        <h3>Best Moment</h3>
+                        <h2>MEDIA GALLERIES</h2>
+                        <h4>Meet McLaren's Best Moment in 2024</h4>
+                        <h5>McLaren is doing best every moment</h5>
+                    </div>
+                    <ul class="v_con three_con test_list">
+                        <li class="cells card ratio_1x1">
+                            <img src="img/gallery01.webp" alt="">
+                            <div class="text_con">
+                                <h4>Bahrain Grand Prix - 7 JUL</h4>
+                            </div>
+                        </li><!--
+                     --><li class="cells card ratio_1x1">
+                            <img src="img/gallery02.webp" alt="">
+                            <div class="text_con">
+                                <h4>Canadian Grand Prix - 9 JUN</h4>
+                            </div>
+                         </li><!--
+                     --><li class="cells card ratio_1x1">
+                            <img src="img/gallery03.webp" alt="">
+                            <div class="text_con">
+                                <h4>Saudi Arabian Grand Prix - 9 MAR</h4>
+                            </div>
+                        </li><!--
+                     --><li class="cells card ratio_1x1">
+                            <img src="img/gallery04.webp" alt="">
+                            <div class="text_con">
+                                <h4>Spanish Grand Prix - 23 JUN</h4>
+                            </div>
+                        </li><!--
+                     --><li class="cells card ratio_1x1">
+                            <img src="img/gallery05.webp" alt="">
+                            <div class="text_con">
+                                <h4>Italian Grand Prix - 1 SEP</h4>
+                            </div>
+                        </li><!--
+                     --><li class="cells card ratio_1x1">
+                            <img src="img/gallery06.webp" alt="">
+                            <div class="text_con">
+                                <h4>Qatar Grand Prix - 1 DEC</h4>
+                            </div>
+                        </li>
+                    </ul>
+                    <script>
+                        $(".test_list").slick({
+                            autoplay: true,
+                            autoplaySpeed: 2500,//자동넘김 시간
+                            arrows: true,       //이전&다음 화살표
+                            centerMode: false,  //가운데 모드 활성화
+                            dots: true,         //도트표시기 활성화
+                            infinite: true,     //처음과 끝 이어줌(루프)
+                            slidesToShow: 3,     //n개씩 보여주기
+                            slidesToScroll: 1,   //n개씩 넘어가기
+                            swipeToSlide: true,  //스와이프 한만큼 보여주기                    
+                            pauseOnHover: true   //마우스 올리면 일시정지
+                        });
+                    </script>
+                </div>
             </div>
+
+
+            <!-- news -->
+            <div id="news" class="sections section_09">
+                <div class="width_con">
+                    <div class="title_con center">
+                        <h3>Latest News</h3>
+                        <h2>Discover Mclaren Racing</h2>
+                        <h4>Find out all the latest news from the Team</h4>
+                        <h5>McLaren is doing best every moment</h5>
+                    </div>
+                    <div class="news_detail">
+                        <div class="img_con ratio_4x3">
+                            <div class="img_box active">
+                                <img src="img/news01.webp" alt="latest news 1">
+                            </div>
+                            <div class="img_box">
+                                <img src="img/news02.jpg" alt="latest news 2">
+                            </div>
+                            <div class="img_box">
+                                <img src="img/news03.jpg" alt="latest news 3">
+                            </div>
+                        </div>
+                        <div class="news_con">
+                            <div class="news_desc active">
+                                <h4>REVESTING LANDO NORRIS’ FIRST F1 TEST AT HUNGARY IN 2017</h4>
+                                <h5>Seven years ago, Lando’s McLaren journey began.</h5>
+                                <h6>2 Aug 2024</h6>
+                            </div>
+                            <div class="news_desc">
+                                <h4>DRIES VAN LANGENDONCK JOINS McLAREN</h4>
+                                <h5>"He has shown huge potential during his karting career and impressed massively"</h5>
+                                <h6>27 Jul 2024</h6>
+                            </div>
+                            <div class="news_desc">
+                                <h4>The 2024 McLAREN MID-SEASON QUIZ</h4>
+                                <h5>How well can you remember the first half of the year?</h5>
+                                <h6>29 Jul 2024</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- footer -->
+            <div id="footer" class="sections section_10">
+                <div class="sponser_wrap">
+                    <div class="sponser sponser01">
+                        <ul class="v_con three_con">
+                            <li class="cells">
+                                <img src="img/sponser/okx_logo.svg" alt="sponser">
+                            </li><!--
+                         --><li class="cells">
+                                <img src="img/sponser/android_logo.svg" alt="sponser">
+                            </li><!--
+                         --><li class="cells">
+                                <img src="img/sponser/chrome_logo.svg" alt="sponser">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sponser sponser02">
+                        <ul class="v_con three_con">
+                            <li class="cells">
+                                <img src="img/sponser/a_better_tomorrow_logo.svg" alt="sponser">
+                            </li><!--
+                         --><li class="cells">
+                                <img src="img/sponser/logo_cisco.svg" alt="sponser">
+                            </li><!--
+                         --><li class="cells">
+                                <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sponser sponser03">
+                        <ul class="v_con six_con">
+                            <li class="cells">
+                                <img src="img/sponser/dell_technologies_logo.svg" alt="sponser">
+                            </li><!--
+                         --><li class="cells">
+                                <img src="img/sponser/dark_trace_logo.svg" alt="sponser">
+                            </li><!--
+                         --><li class="cells">
+                                <img src="img/sponser/monster_logo.svg" alt="sponser">
+                            </li><!--
+                         --><li class="cells">
+                                <img src="img/sponser/arrow_logo.svg" alt="sponser">
+                            </li><!--
+                         --><li class="cells">
+                                <img src="img/sponser/jack_daniels_logo.svg" alt="sponser">
+                            </li><!--
+                         --><li class="cells">
+                                <img src="img/sponser/salesforce_logo.svg" alt="sponser">
+                            </li><!--
+                         --><li class="cells">
+                                <img src="img/sponser/alteryx_logo.svg" alt="sponser">
+                            </li><!--
+                         --><li class="cells">
+                                <img src="img/sponser/hilton_logo.svg" alt="sponser">
+                            </li><!--
+                         --><li class="cells">
+                                <img src="img/sponser/eg_logo.svg" alt="sponser">
+                            </li><!--
+                         --><li class="cells">
+                                <img src="img/sponser/dropbox_logo.svg" alt="sponser">
+                            </li><!--
+                         --><li class="cells">
+                                <img src="img/sponser/unilever_logo.svg" alt="sponser">
+                            </li><!--
+                         --><li class="cells">
+                                <img src="img/sponser/stanley_logo.svg" alt="sponser">
+                            </li><!--
+                         --><li class="cells">
+                                <img src="img/sponser/goldman_sachs_logo.svg" alt="sponser">
+                            </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/logo_cisco.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/logo_cisco.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/logo_cisco.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/logo_cisco.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/logo_cisco.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/logo_cisco.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li><!--
+                            --><li class="cells">
+                                   <img src="img/sponser/dp_world_logo.svg" alt="sponser">
+                               </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
 
             <!-- modal -->
             <div class="modal">
                 <div class="width_con">
-                    <iframe src="https://www.youtube.com/embed/WIO0YW2Exs4?autoplay=1&mute=0&controls=1&origin=https%3A%2F%2Fwww.mclaren.com&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&widgetid=7" allowfullscreen frameborder="0" autoplay></iframe>
+                    <iframe frameborder="0" src="https://www.youtube.com/embed/WIO0YW2Exs4?autoplay=1&mute=1&controls=1&origin=https%3A%2F%2Fwww.mclaren.com&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&widgetid=1"></iframe>
                 </div>
                 <button><i class="fa-regular fa-xmark"></i></button>
             </div>
         </div>
-
-        <script src="js/index.js"></script>
     </body>
 </html>

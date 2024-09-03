@@ -80,4 +80,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
     modalOpen();
+
+    const newsHover = () => {
+        const imgBoxs = document.querySelectorAll('.img_box');
+        const newDescs = document.querySelectorAll('.news_desc');
+
+        newDescs.forEach((item, index) => {
+            item.addEventListener('mouseover', () => {
+                newDescs.forEach((content) => {
+                    content.classList.remove('active');
+                });
+
+                imgBoxs.forEach((content) => {
+                    content.classList.remove('active');
+                });
+                imgBoxs[index].classList.add('active');
+                newDescs[index].classList.add('active');
+            });
+        });
+    };
+    newsHover();
 });
