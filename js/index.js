@@ -1,15 +1,40 @@
-// nav down
-window.addEventListener('scroll', function() {
-    let header = document.getElementById('header');
-
-    if (this.window.scrollY > 0) {
-        header.classList.add('active');
-    } else {
-        header.classList.remove('active');
-    }
-});
-
 document.addEventListener('DOMContentLoaded', function() {
+    // window scroll events
+    window.addEventListener('scroll', function() {
+        // nav down
+        let header = document.getElementById('header');
+
+        if (this.window.scrollY > 0) {
+            header.classList.add('active');
+        } else {
+            header.classList.remove('active');
+        }
+
+
+        // top & down
+        const section02Height = document.getElementById('ad_01').clientHeight;
+        const section03Height = document.getElementById('driver').clientHeight;
+
+        if (window.scrollY >= section02Height + section03Height) {
+            document.querySelector(".global_btn").style.opacity = "1";
+            // document.querySelector(".go_down").style.display = "block";
+        } else {
+            document.querySelector(".global_btn").style.opacity = "0";
+            // document.querySelector(".go_down").style.display = "none";
+        }
+
+        // '위로 이동' 버튼 클릭 이벤트
+        document.querySelector(".go_top").addEventListener("click", function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        // '아래로 이동' 버튼 클릭 이벤트
+        document.querySelector(".go_down").addEventListener("click", function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+        });
+    });
 
     // d-day
     function diffDay() {
@@ -159,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const modalClose = () => {
         const modal = document.querySelector('.modal');
-        const modalCloseBtn = document.querySelector('.modal > button');
+        const modalCloseBtn = document.querySelector('.modal button');
 
         modalCloseBtn.addEventListener('click', (e) => {
             e.preventDefault();
