@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 /* section01 */
+html.loading #visual.sections.section_01 > .width_con .title_con { display: none; }
+html.loading #visual.sections.section_01 > .width_con .section01_box { display: none; }
 #visual.sections.section_01{ overflow: hidden; height: 100vh;}
 #visual.sections.section_01:after{ position: absolute; content: ''; top: 0; left: 0; width: 100%; height: 100%; background: var(--color-k-050);}
 #visual.sections.section_01 > .width_con{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;}
@@ -12,7 +14,7 @@
 #visual.sections.section_01 > .width_con .title_con > h3,
 #visual.sections.section_01 > .width_con .title_con > h2,
 #visual.sections.section_01 > .width_con .title_con > h4,
-#visual.sections.section_01 > .width_con .title_con > h5 {  }
+#visual.sections.section_01 > .width_con .title_con > h5 {}
 #visual.sections.section_01 > .width_con .section01_box { position: absolute; left: 0; bottom: -145px; width: 100%; opacity: 0; animation: blurredBanner 1s 2.8s ease-in-out forwards; }
 #visual.sections.section_01 > .width_con .section01_box > .box { position: relative; padding: var(--mrgn-x2) !important; box-sizing: border-box; }
 #visual.sections.section_01 > .width_con .section01_box > .box > h3 { padding-bottom: var(--mrgn-x2); }
@@ -30,7 +32,7 @@
 #visual.sections.section_01 > .width_con .section01_box > .box.box_left .box_desc .points h4 { font-weight: 700; }
 #visual.sections.section_01 > .width_con .section01_box > .box.box_right { position: relative; height: 247.75px; overflow: hidden; }
 #visual.sections.section_01 > .width_con .section01_box > .box.box_right::before { z-index: 1; }
-#visual.sections.section_01 > .width_con .section01_box > .box.box_right::after { position: absolute; content: ''; right: 0; top: 0; width: 50%; height: 100%; background: url(../img/bg_race.webp) 50% 50% no-repeat #ff7300; background-blend-mode: screen; background-size: cover; mask-image: linear-gradient(270deg, #000 0%, transparent 100%); }
+#visual.sections.section_01 > .width_con .section01_box > .box.box_right::after { position: absolute; content: ''; right: 0; top: 0; width: 50%; height: 100%; background: url(../img/bg_race.webp) 50% 50% no-repeat #ff7300; background-blend-mode: screen; background-size: cover; mask-image: linear-gradient(270deg, #000 0%, transparent 100%); mask-image: linear-gradient(270deg, #000 0%, transparent 100%); }
 #visual.sections.section_01 > .width_con .section01_box > .box.box_right .box_half { width: 50%; display: inline-block; float: left; }
 #visual.sections.section_01 > .width_con .section01_box > .box.box_right .box_half:nth-child(2) { position: relative; z-index: 2; }
 #visual.sections.section_01 > .width_con .section01_box > .box.box_right .box_half > h3 { padding-bottom: var(--mrgn-x2); }
