@@ -87,8 +87,10 @@ html.loading #visual.sections.section_01 > .width_con .section01_box { display: 
 
 
 /* driver section03  */
-#driver.sections.section_03 { position: relative; background: url(../img/bg_lando-cover-2024.jpg) no-repeat left bottom; overflow: hidden; }
-#driver.sections.section_03.piastri { background: url(../img/bg_oscar-cover-2024.jpg) no-repeat left bottom;}
+#driver.sections.section_03 { background: url(../img/bg_visual01.jpg) no-repeat; }
+#driver.sections.section_03.piastri { background: url(../img/bg_visual02.jpg) no-repeat;}
+#driver.sections.section_03 > .norris { position: absolute; left: 50%; top: 72px; width: 600px; height: 800px; background: url(../img/bg_norris.png) no-repeat; transform: translateX(-50%); }
+#driver.sections.section_03 > .piastri { position: absolute; left: 50%; top: 72px; width: 600px; height: 800px; background: url(../img/bg_piastri.png) no-repeat; transform: translateX(-50%); display: none; }
 #driver.sections.section_03 > .slide_toggle { display: none; position: absolute; right: 0; top: 0; width: 53px; height: 100%; background: var(--color-point); text-wrap: nowrap; cursor: pointer; transition: all .3s ease-in-out; box-shadow: 0 0 20px 0 var(--color-k-085); border-radius: 10px 0 0 10px; animation: driverSlide 1000ms ease; animation-play-state: paused; z-index: 2; }
 #driver.sections.section_03 > .slide_toggle.selected { display: block; }
 #driver.sections.section_03 > .slide_toggle .arrow {position: absolute; top: 50%; left: -30px; width: 30px; height: 60px; transform: translateY(-50%); background: var(--color-point); text-align: center; border-radius: 10px 0 0 10px; box-shadow: -10px 0 20px -10px var(--color-k-085); }
@@ -100,15 +102,13 @@ html.loading #visual.sections.section_01 > .width_con .section01_box { display: 
 #driver.sections.section_03 > .width_con {}
 #driver.sections.section_03 > .width_con > ul.v_con { display: none; }
 #driver.sections.section_03 > .width_con > ul.v_con.selected { display: block; }
-#driver.sections.section_03 > .width_con ul.v_con > li.cells { vertical-align: middle; }
-#driver.sections.section_03 > .width_con ul.v_con > li.cells .title_con {}
-#driver.sections.section_03 > .width_con ul.v_con > li.cells .box { position: relative; float: right; width: 66%; }
-#driver.sections.section_03 > .width_con ul.v_con > li.cells .box::after { content: ''; position: absolute; right: 39px; bottom: 62px; width: 130px; height: 100px; background: url(../img/noris_logo.png) no-repeat; background-size: cover; }
-#driver.sections.section_03 > .width_con ul.v_con > li.cells .box.piastri::after { right: 39px; bottom: 78px; width: 125px; height: 47px; background: url(../img/oscar_logo.png) no-repeat; background-size: cover; }
-#driver.sections.section_03 > .width_con ul.v_con > li.cells .box .box_title > h3 {}
-#driver.sections.section_03 > .width_con ul.v_con > li.cells .box ul.v_con > li.cells {}
-#driver.sections.section_03 > .width_con ul.v_con > li.cells .box ul.v_con > li.cells:first-child > h4 { color: var(--color-w-065); }
-#driver.sections.section_03 > .width_con ul.v_con > li.cells .box ul.v_con > li.cells > h4 { font-weight: 400; }
+#driver.sections.section_03 > .width_con > ul.v_con > li.cells {}
+#driver.sections.section_03 > .width_con > ul.v_con > li.cells > ul.v_con { width: 412px; }
+#driver.sections.section_03 > .width_con > ul.v_con > li.cells:nth-child(2) > ul.v_con { float: right; }
+#driver.sections.section_03 > .width_con > ul.v_con > li.cells > ul.v_con > li.cells { width: 170px; background: var(--color-w-025); backdrop-filter: blur(1px); border-radius: 10px;  box-sizing: border-box; box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .35); }
+#driver.sections.section_03 > .width_con > ul.v_con > li.cells > ul.v_con > li.cells::after { position: absolute; content: ''; left: 0; top: 0; width: 100%; height: 100%; mask-image: linear-gradient(-135deg, var(--color-w-025), var(--color-w-085)); box-shadow: inset 0 0 0 2px #fff; border-radius: 10px; } 
+#driver.sections.section_03 > .width_con > ul.v_con > li.cells > ul.v_con > li.cells > .driver_desc { height: 100%; display: flex; flex-direction: column; justify-content: center; gap: var(--mrgn-half); }
+#driver.sections.section_03 > .width_con > ul.v_con > li.cells > ul.v_con > li.cells > .driver_desc > i { font-size: 26px; }
 
 @keyframes driverSlide {
 	0% {
@@ -121,6 +121,9 @@ html.loading #visual.sections.section_01 > .width_con .section01_box { display: 
 		width: 53px;
 	}
 }
+
+
+
 
 
 /* MCL38 section04 */
@@ -221,7 +224,7 @@ html.loading #visual.sections.section_01 > .width_con .section01_box { display: 
 #news.sections.section_09 > .width_con > .news_detail > .img_con > .img_box { position: absolute; left: 0; top: 0; width: 100%; height: 100%; opacity: 0; transition: all .25s ease-in-out; border-radius: inherit; overflow: hidden; }
 #news.sections.section_09 > .width_con > .news_detail > .img_con > .img_box.active { opacity: 1; }
 #news.sections.section_09 > .width_con > .news_detail > .img_con > .img_box > img { width: 100%; height: 100%; object-fit: cover; }
-#news.sections.section_09 > .width_con > .news_detail > .news_con { width: 33.3333%; margin-left: -4px; }
+#news.sections.section_09 > .width_con > .news_detail > .news_con { width: 33.3333%; margin-left: -5px; }
 #news.sections.section_09 > .width_con > .news_detail > .news_con > .news_desc { position: relative; padding: var(--mrgn) var(--mrgn-x2); background: #f6f6f6; cursor: pointer; }
 #news.sections.section_09 > .width_con > .news_detail > .news_con > .news_desc:nth-child(1) { border-radius: 0 10px 0 0; }
 #news.sections.section_09 > .width_con > .news_detail > .news_con > .news_desc:nth-child(2) {}
