@@ -122,6 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const driverToggleBtn = document.querySelectorAll('.slide_toggle');
         const driverCon = document.querySelectorAll('.driver_con');
         const driverSection = document.querySelector('.section_03');
+        const norris = document.querySelector('.norris');
+        const piastri = document.querySelector('.piastri');
     
         driverToggleBtn.forEach((item, index) => {
             item.addEventListener('click', (e) => {
@@ -149,9 +151,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         driverCon[1].classList.add('selected');
                         driverToggleBtn[1].classList.add('selected');
                         driverSection.classList.add('piastri');
+                        norris.style.display = 'none';
+                        piastri.style.display = 'block'
                     } else {
                         driverCon[0].classList.add('selected');
                         driverToggleBtn[0].classList.add('selected');
+                        norris.style.display = 'block';
+                        piastri.style.display = 'none'
                     }
     
                     // 애니메이션 상태를 "paused"로 설정하여 다음 클릭에 영향을 주지 않도록 함
