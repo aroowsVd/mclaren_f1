@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // d-day
     function diffDay() {
-        const startDay = new Date("2024-09-31");
+        const startDay = new Date("2024-12-31");
         const today = new Date();
     
         const dayCount = startDay - today;
@@ -192,6 +192,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const modal = document.querySelector('.modal');
         const modalCloseBtn = document.querySelector('.modal button');
 
+        modal.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.remove('active');
+        });
         modalCloseBtn.addEventListener('click', (e) => {
             e.preventDefault();
             modal.classList.remove('active');

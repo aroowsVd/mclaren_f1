@@ -37,7 +37,7 @@
 	--color-k-085: rgba(0, 0, 0, .85);
 	--color-k:   #000;
 }
-html, body{ position: relative; min-width: var(--basic-width); background: var(--color-main); color: var(--color-w); font-size: var(--basic-font-size);}
+html, body{ position: relative; min-width: var(--basic-width); background: var(--color-main); color: var(--color-w); font-size: var(--basic-font-size); }
 .wrap{ position: relative;}
 .sections{ position: relative;}
 .width_con{ position: relative; margin: 0 auto; width: var(--basic-width); padding: var(--mrgn-x8) 0;}
@@ -219,8 +219,8 @@ html.loading #header.sections.section_00 { display: none; }
 
 
 /* 모달 */
-.modal { display: none; opacity: 0; transition: all .2s ease-in-out; }
-.modal.active { display: block; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgb(17, 19, 20); z-index: 9999; opacity: 1; }
+.modal { visibility: hidden; opacity: 0; transition: all .4s ease-in-out; }
+.modal.active { visibility: visible; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgb(17, 19, 20, 0.5); z-index: 9999; opacity: 1; backdrop-filter: blur(10px); transition: all .4s ease-in-out; }
 .modal > .modal_con { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 1200px; height: calc(100% - var(--mrgn-x8) * 2); }
 .modal > .modal_con > iframe { width: 100%; height: 100%; }
 .modal > .modal_con > button { position: absolute; right: -28px; top: -28px; width: 56px; height: 56px; cursor: pointer; border: 2px solid var(--color-w-015); background: var(--color-point); border-radius: 50%; }
@@ -253,4 +253,8 @@ html.loading #header.sections.section_00 { display: none; }
 .global_btn a { display: flex; justify-content: center; align-items: center; width: 42px; height: 32px; color: #fff; background-color: var(--color-point); transition: 0.2s; }
 .global_btn a.go_top { border-radius: 10px 10px 0 0; }
 .global_btn a.go_down { margin-top: 2px; border-radius: 0 0 10px 10px; }
+.global_btn a.go_top:hover i { transform: translateY(-1px); transition: inherit;}
+.global_btn a.go_down:hover i { transform: translateY(1px); transition: inherit;}
+.global_btn a.go_top:active i { transform: translateY(-2px); transition: inherit;}
+.global_btn a.go_down:active i { transform: translateY(2px); transition: inherit;}
 .global_btn a:hover { transform: scale(1.1); }
