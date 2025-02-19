@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // d-day
     function diffDay() {
-        const startDay = new Date("2024-12-31");
+        const startDay = new Date("2025-03-31");
         const today = new Date();
     
         const dayCount = startDay - today;
